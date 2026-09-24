@@ -1,0 +1,14 @@
+# PhpStorm / IDE
+.idea/
+*.iml
+.vscode/
+
+# OpenServer
+*.log
+*.pid
+*.dat
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
