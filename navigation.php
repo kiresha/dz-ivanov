@@ -1,3 +1,9 @@
+<?php
+$hour = (int)date('H');
+$isNight = true;
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -7,6 +13,9 @@
     <title>Навигация</title>
     <link rel="stylesheet" href="content/css/navigation.css">
     <link href="content/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" rel="stylesheet">
+    <?php if ($isNight): ?>
+        <link rel="stylesheet" href="content/css/night.css">
+    <?php endif; ?>
 </head>
 
 <body>

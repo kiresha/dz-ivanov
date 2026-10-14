@@ -1,6 +1,17 @@
 <?php
-$hour = (int)date('H');
-$isNight = true;
+
+$hour = date("H");
+
+if (isset($_GET["theme"])) {
+    $theme = $_GET["theme"];
+} else {
+    if ($hour >= 8 && $hour < 20) {
+        $theme = "night.css";
+    } else {
+        $theme = "day.css";
+    }
+}
+
 ?>
 
 
@@ -12,9 +23,7 @@ $isNight = true;
     <title>Главная</title>
     <link rel="stylesheet" href="content/css/styles.css">
     <link href="content/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" rel="stylesheet">
-    <?php if ($isNight): ?>
-        <link rel="stylesheet" href="content/css/night.css">
-    <?php endif; ?>
+    <link rel="stylesheet" href="<?php echo $theme; ?>">
 </head>
 <body>
 
